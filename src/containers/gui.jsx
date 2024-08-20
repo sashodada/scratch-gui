@@ -91,7 +91,6 @@ class GUI extends React.Component {
             onUpdateProjectId,
             onVmInit,
             projectHost,
-            projectId,
             /* eslint-enable no-unused-vars */
             children,
             fetchingProject,
