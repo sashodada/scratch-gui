@@ -128,15 +128,16 @@ const GUIComponent = props => {
         vm,
         ...componentProps
     } = omit(props, 'dispatch');
-    if (children) {
-        return <Box {...componentProps}>{children}</Box>;
-    }
 
     useEffect(() => {
         if (projectId && projectId !== '0' && !isPlayerOnly && onLoadRandomPrompt) {
             onLoadRandomPrompt();
         }
     }, [projectId, isPlayerOnly, onLoadRandomPrompt]);
+
+    if (children) {
+        return <Box {...componentProps}>{children}</Box>;
+    }
 
     const tabClassNames = {
         tabs: styles.tabs,
